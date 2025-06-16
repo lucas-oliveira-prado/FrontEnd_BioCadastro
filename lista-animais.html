@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCadastro - Lista de Animais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/BioCadastroLogo.png" alt="BioCadastro Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="btnSobre">Sobre</a></li>
+                    <li><a href="#" id="btnContato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Lista de Animais</h1>
+            
+            <div class="add-animal-button">
+                <button id="btnAdicionarAnimal" class="btn btn-primary">+ Adicionar animal</button>
+            </div>
+            
+            <div class="animal-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Espécie</th>
+                            <th>Raça</th>
+                            <th>Sexo</th>
+                            <th>Idade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mimosa</td>
+                            <td>Bovino</td>
+                            <td>Angus</td>
+                            <td>F</td>
+                            <td>7 anos</td>
+                            <td class="action-buttons">
+                                <button class="btn-icon botaoVacina"><img src="assets/botaoVacina.png" alt="Histórico de Vacinas"></button>
+                                <button class="btn-icon botaoPeso"><img src="assets/botaoPeso.png" alt="Histórico de Peso"></button>
+                                <button class="btn-icon botaoEditar"><img src="assets/botaoEditar.png" alt="Editar Animal"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Eva</td>
+                            <td>Bovino</td>
+                            <td>Holstein</td>
+                            <td>F</td>
+                            <td>2 anos</td>
+                            <td class="action-buttons">
+                                <button class="btn-icon botaoVacina"><img src="assets/botaoVacina.png" alt="Histórico de Vacinas"></button>
+                                <button class="btn-icon botaoPeso"><img src="assets/botaoPeso.png" alt="Histórico de Peso"></button>
+                                <button class="btn-icon botaoEditar"><img src="assets/botaoEditar.png" alt="Editar Animal"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Adicionar/Editar Animal -->
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeAnimalModal">&times;</span>
+            <h2 class="modal-title" id="animalModalTitle">Adicionar Animal</h2>
+            <div class="modal-body">
+                <!-- Empty modal body - content will be added dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sobre -->
+    <div id="sobreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeSobre">&times;</span>
+            <h2 class="modal-title">Sobre a Fazenda Experimental Gralha Azul (FEGA)</h2>
+            <div class="modal-body">
+                <p>A Fazenda Experimental Gralha Azul (FEGA), vinculada à Escola de Medicina e Ciências da Vida da PUCPR, é um espaço fundamental para o ensino, pesquisa e extensão universitária. Localizada no município de Fazenda Rio Grande, Paraná, a FEGA estende-se por 200 hectares dedicados à formação prática e ao desenvolvimento científico.</p>
+                
+                <p><strong>Nosso Endereço:</strong><br>
+                Av. Venezuela, 1956 – Zona Rural, Fazenda Rio Grande – PR, 83820-455.</p>
+                
+                <p>A FEGA é um ambiente de aprendizado prático e inovação, preparando os futuros profissionais e impulsionando a pesquisa científica no setor agropecuário e veterinário.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contato -->
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeContato">&times;</span>
+            <h2 class="modal-title">Entre em Contato com a FEGA</h2>
+            <div class="modal-body">
+                <p>Para mais informações, dúvidas ou agendamentos, por favor, preencha o formulário abaixo. Nossa equipe retornará o contato o mais breve possível.</p>
+                
+                <form id="contatoForm">
+                                          <div class="form-group">
+                         <label for="nome">Seu nome</label>
+                         <input type="text" id="nome">
+                      </div>
+                      
+                      <div class="form-group">
+                         <label for="email">Seu e-mail</label>
+                         <input type="text" id="email">
+                      </div>
+                      
+                      <div class="form-group">
+                         <label for="telefone">Seu telefone</label>
+                         <input type="tel" id="telefone">
+                      </div>
+                      
+                      <div class="form-group">
+                         <label for="assunto">Assunto</label>
+                         <input type="text" id="assunto">
+                      </div>
+                      
+                      <div class="form-group">
+                         <label for="mensagem">Mensagem</label>
+                         <textarea id="mensagem"></textarea>
+                      </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

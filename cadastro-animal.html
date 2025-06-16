@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCadastro - Cadastro de Animais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/BioCadastroLogo.png" alt="BioCadastro Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="btnSobre">Sobre</a></li>
+                    <li><a href="#" id="btnContato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Cadastro de Animais</h1>
+            
+            <div class="form-container">
+                <form id="animalForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome do Animal</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" name="sexo">
+                                <option value="">Selecione o sexo</option>
+                                <option value="0">Macho</option>
+                                <option value="1">Fêmea</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="raca">Raça</label>
+                            <select id="raca" name="raca">
+                                <option value="">Selecione a raça</option>
+                                <option value="1">Angus</option>
+                                <option value="2">Holstein</option>
+                                <option value="3">Nelore</option>
+                                <option value="4">Brahman</option>
+                                <option value="5">Simmental</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="data_nascimento">Data de Nascimento</label>
+                            <input type="datetime-local" id="data_nascimento" name="data_nascimento">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status" name="status">
+                                <option value="1">Ativo</option>
+                                <option value="0">Inativo</option>
+                                <option value="2">Vendido</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar Animal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Sobre -->
+    <div id="sobreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeSobre">&times;</span>
+            <h2 class="modal-title">Sobre a Fazenda Experimental Gralha Azul (FEGA)</h2>
+            <div class="modal-body">
+                <p>A Fazenda Experimental Gralha Azul (FEGA), vinculada à Escola de Medicina e Ciências da Vida da PUCPR, é um espaço fundamental para o ensino, pesquisa e extensão universitária. Localizada no município de Fazenda Rio Grande, Paraná, a FEGA estende-se por 200 hectares dedicados à formação prática e ao desenvolvimento científico.</p>
+                
+                <p><strong>Nosso Endereço:</strong><br>
+                Av. Venezuela, 1956 – Zona Rural, Fazenda Rio Grande – PR, 83820-455.</p>
+                
+                <p>A FEGA é um ambiente de aprendizado prático e inovação, preparando os futuros profissionais e impulsionando a pesquisa científica no setor agropecuário e veterinário.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contato -->
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeContato">&times;</span>
+            <h2 class="modal-title">Entre em Contato com a FEGA</h2>
+            <div class="modal-body">
+                <p>Para mais informações, dúvidas ou agendamentos, por favor, preencha o formulário abaixo. Nossa equipe retornará o contato o mais breve possível.</p>
+                
+                <form id="contatoForm">
+                    <div class="form-group">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Seu e-mail</label>
+                        <input type="text" id="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Seu telefone</label>
+                        <input type="tel" id="telefone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="left">
+                    <p>Projeto 3 - Programação Web v1.0</p>
+                    <p>© Copyright - BioCadastro</p>
+                </div>
+                <div class="social-media">
+                    <img src="assets/facebook.png" alt="Facebook">
+                    <img src="assets/instagram.png" alt="Instagram">
+                    <img src="assets/whatsapp.png" alt="WhatsApp">
+                </div>
+                <div class="right">
+                    <img src="assets/logoPUCPR.png" alt="PUCPR Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
